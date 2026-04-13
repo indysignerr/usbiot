@@ -28,7 +28,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-usbiot-ink text-white noise-overlay">
+    <footer className="bg-gradient-to-b from-usbiot-red-dark to-usbiot-ink text-white noise-overlay">
       <div className="relative z-10">
         {/* CTA Band */}
         <div className="border-b border-white/10 relative overflow-hidden">

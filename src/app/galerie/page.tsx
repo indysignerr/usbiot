@@ -30,16 +30,16 @@ const categories: { label: GalleryCategory; icon: typeof Camera }[] = [
 const categoryColors: Record<GalleryCategory, string> = {
   Tous: "bg-muted text-foreground",
   Matchs: "bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20",
-  Entrainements: "bg-blue-500/10 text-blue-600 border-blue-500/20",
-  Stages: "bg-usbiot-gold/10 text-usbiot-gold-dark border-usbiot-gold/20",
-  Evenements: "bg-purple-500/10 text-purple-600 border-purple-500/20",
+  Entrainements: "bg-usbiot-gold/10 text-usbiot-gold-dark border-usbiot-gold/20",
+  Stages: "bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20",
+  Evenements: "bg-usbiot-gold-dark/10 text-usbiot-gold-dark border-usbiot-gold-dark/20",
 };
 
 const categoryBg: Record<Exclude<GalleryCategory, "Tous">, string> = {
   Matchs: "from-usbiot-red/20 via-usbiot-red-dark/10 to-usbiot-ink/20",
-  Entrainements: "from-blue-500/20 via-blue-600/10 to-blue-900/20",
-  Stages: "from-usbiot-gold/20 via-usbiot-gold-dark/10 to-amber-900/20",
-  Evenements: "from-purple-500/20 via-purple-600/10 to-purple-900/20",
+  Entrainements: "from-usbiot-gold/20 via-usbiot-gold-dark/10 to-usbiot-gold-dark/20",
+  Stages: "from-usbiot-red/20 via-usbiot-red-dark/10 to-usbiot-red-dark/20",
+  Evenements: "from-usbiot-gold-dark/20 via-usbiot-gold/10 to-usbiot-gold-dark/20",
 };
 
 const categoryIcons: Record<Exclude<GalleryCategory, "Tous">, typeof Camera> = {

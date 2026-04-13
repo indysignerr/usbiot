@@ -45,7 +45,7 @@ export function Header() {
   const pathname = usePathname();
 
   /* Pages with dark hero backgrounds where header text needs to be white */
-  const hasDarkHero = pathname === "/" || pathname === "/entrainements";
+  const hasDarkHero = true;
   const isTransparentOnDark = !scrolled && hasDarkHero;
 
   useEffect(() => {
@@ -69,7 +69,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <a
               href="tel:+33689983661"
-              className="flex items-center gap-1.5 hover:text-primary transition-colors"
+              className="flex items-center gap-1.5 hover:text-usbiot-gold transition-colors"
             >
               <Phone className="w-3 h-3" weight="regular" />
               06 89 98 36 61
@@ -77,30 +77,9 @@ export function Header() {
             <span className="text-border">|</span>
             <a
               href="mailto:usbiot.secretariat@gmail.com"
-              className="hover:text-primary transition-colors"
+              className="hover:text-usbiot-gold transition-colors"
             >
               usbiot.secretariat@gmail.com
-            </a>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="https://www.facebook.com/usbiot/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Facebook US Biot"
-            >
-              Facebook
-            </a>
-            <span className="text-border">|</span>
-            <a
-              href="https://www.instagram.com/usbiotfootball/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Instagram US Biot"
-            >
-              Instagram
             </a>
           </div>
         </div>
@@ -141,7 +120,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg flex items-center gap-1 ${isTransparentOnDark ? "hover:bg-white/10" : "hover:bg-primary/5"} ${isActive ? (isTransparentOnDark ? "text-white font-semibold" : "text-primary font-semibold") : (isTransparentOnDark ? "text-white/80 hover:text-white" : "text-foreground/80 hover:text-primary")}`}
+                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg flex items-center gap-1 ${isTransparentOnDark ? "hover:bg-white/10" : "hover:bg-usbiot-gold/10"} ${isActive ? "text-usbiot-gold font-semibold" : (isTransparentOnDark ? "text-white/80 hover:text-usbiot-gold" : "text-foreground/80 hover:text-usbiot-gold")}`}
                 >
                   {item.name}
                   {item.children && (
@@ -155,7 +134,7 @@ export function Header() {
                         <Link
                           key={child.name}
                           href={child.href}
-                          className="block px-4 py-2 text-sm text-foreground/80 hover:text-primary hover:bg-primary/5 transition-colors"
+                          className="block px-4 py-2 text-sm text-foreground/80 hover:text-usbiot-gold hover:bg-usbiot-gold/10 transition-colors"
                         >
                           {child.name}
                         </Link>
@@ -225,7 +204,7 @@ export function Header() {
                         href={item.href}
                         onClick={() => setOpen(false)}
                         aria-current={isActive ? "page" : undefined}
-                        className={`block px-6 py-3 text-base font-medium hover:bg-primary/5 transition-colors ${isActive ? "text-primary font-semibold" : "text-foreground/80 hover:text-primary"}`}
+                        className={`block px-6 py-3 text-base font-medium hover:bg-usbiot-gold/10 transition-colors ${isActive ? "text-usbiot-gold font-semibold" : "text-foreground/80 hover:text-usbiot-gold"}`}
                       >
                         {item.name}
                       </Link>
@@ -241,7 +220,7 @@ export function Header() {
                     <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
                       <a
                         href="tel:+33689983661"
-                        className="hover:text-primary transition-colors"
+                        className="hover:text-usbiot-gold transition-colors"
                       >
                         06 89 98 36 61
                       </a>

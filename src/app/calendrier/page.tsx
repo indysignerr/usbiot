@@ -41,13 +41,13 @@ const teams = [
 ];
 
 const categoryColors: Record<string, string> = {
-  U7: "bg-emerald-500 text-white",
-  U9: "bg-emerald-600 text-white",
-  "U10-U11": "bg-blue-500 text-white",
-  "U12-U13": "bg-amber-500 text-white",
-  "U14-U15": "bg-purple-500 text-white",
+  U7: "bg-usbiot-red text-white",
+  U9: "bg-usbiot-red-dark text-white",
+  "U10-U11": "bg-usbiot-gold text-usbiot-ink",
+  "U12-U13": "bg-usbiot-red/80 text-white",
+  "U14-U15": "bg-usbiot-gold/80 text-usbiot-ink",
   "U16-U18": "bg-usbiot-red text-white",
-  Seniors: "bg-usbiot-ink text-white dark:bg-white dark:text-usbiot-ink",
+  Seniors: "bg-usbiot-gold-dark text-white",
 };
 
 interface Match {
@@ -636,10 +636,10 @@ export default function CalendrierPage() {
                               <Badge
                                 className={
                                   win
-                                    ? "bg-emerald-500 text-white"
+                                    ? "bg-usbiot-gold text-usbiot-ink"
                                     : draw
-                                      ? "bg-amber-500 text-white"
-                                      : "bg-red-500 text-white"
+                                      ? "bg-usbiot-gold/60 text-usbiot-ink"
+                                      : "bg-usbiot-red text-white"
                                 }
                               >
                                 {win ? "Victoire" : draw ? "Nul" : "Defaite"}

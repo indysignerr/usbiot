@@ -25,9 +25,9 @@ interface Article {
 const categoryColors: Record<ArticleCategory, string> = {
   Match: "bg-usbiot-red text-white",
   Club: "bg-usbiot-gold text-usbiot-ink",
-  Formation: "bg-emerald-600 text-white",
-  Stage: "bg-blue-600 text-white",
-  Evenement: "bg-purple-600 text-white",
+  Formation: "bg-usbiot-gold text-usbiot-ink",
+  Stage: "bg-usbiot-red-dark text-white",
+  Evenement: "bg-usbiot-gold-dark text-white",
 };
 
 const featuredArticle: Article = {

@@ -36,19 +36,19 @@ const tarifs = [
     category: "U7 - U9",
     age: "5 - 8 ans",
     price: 250,
-    color: "bg-emerald-500",
+    color: "bg-usbiot-red",
   },
   {
     category: "U10 - U13",
     age: "9 - 12 ans",
     price: 280,
-    color: "bg-blue-500",
+    color: "bg-usbiot-gold",
   },
   {
     category: "U14 - U18",
     age: "13 - 17 ans",
     price: 300,
-    color: "bg-purple-500",
+    color: "bg-usbiot-red-dark",
   },
   {
     category: "Seniors",

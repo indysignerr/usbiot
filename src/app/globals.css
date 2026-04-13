@@ -297,6 +297,16 @@
   background: #cdb728;
 }
 
+/* Custom football cursor */
+* {
+  cursor: url('/images/cursor-football.svg') 16 16, auto;
+}
+
+a, button, [role="button"], input, select, textarea, label[for],
+summary, [tabindex]:not([tabindex="-1"]) {
+  cursor: url('/images/cursor-football-pointer.svg') 16 16, pointer;
+}
+
 /* Selection color */
 ::selection {
   background-color: #d8261c;

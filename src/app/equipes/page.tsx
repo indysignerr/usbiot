@@ -40,8 +40,8 @@ const categories: TeamCategory[] = [
     id: "u7",
     name: "U7",
     age: "5-6 ans",
-    color: "bg-emerald-500",
-    badgeBg: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20",
+    color: "bg-usbiot-red",
+    badgeBg: "bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20",
     coach: "Marie Fontaine",
     assistants: ["Lucas Perrin"],
     trainings: ["Mercredi 14h00 - 15h30", "Samedi 10h00 - 11h30"],
@@ -55,8 +55,8 @@ const categories: TeamCategory[] = [
     id: "u9",
     name: "U9",
     age: "7-8 ans",
-    color: "bg-emerald-500",
-    badgeBg: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20",
+    color: "bg-usbiot-gold",
+    badgeBg: "bg-usbiot-gold/10 text-usbiot-gold-dark border-usbiot-gold/20",
     coach: "Thomas Garcia",
     assistants: ["Julien Blanc"],
     trainings: ["Mercredi 14h00 - 15h30", "Vendredi 17h30 - 19h00"],
@@ -70,8 +70,8 @@ const categories: TeamCategory[] = [
     id: "u11",
     name: "U11",
     age: "9-10 ans",
-    color: "bg-blue-500",
-    badgeBg: "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20",
+    color: "bg-usbiot-red-dark",
+    badgeBg: "bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20",
     coach: "Nicolas Leroy",
     assistants: ["David Caron", "Pierre Morel"],
     trainings: ["Mardi 17h30 - 19h00", "Jeudi 17h30 - 19h00"],
@@ -85,8 +85,8 @@ const categories: TeamCategory[] = [
     id: "u13",
     name: "U13",
     age: "11-12 ans",
-    color: "bg-amber-500",
-    badgeBg: "bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/20",
+    color: "bg-usbiot-gold/80",
+    badgeBg: "bg-usbiot-gold/10 text-usbiot-gold-dark border-usbiot-gold/20",
     coach: "Sébastien Roux",
     assistants: ["Anthony Vidal"],
     trainings: ["Lundi 17h30 - 19h00", "Mercredi 14h00 - 16h00"],
@@ -100,8 +100,8 @@ const categories: TeamCategory[] = [
     id: "u15",
     name: "U15",
     age: "13-14 ans",
-    color: "bg-purple-500",
-    badgeBg: "bg-purple-500/10 text-purple-700 dark:text-purple-400 border-purple-500/20",
+    color: "bg-usbiot-red/80",
+    badgeBg: "bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20",
     coach: "Franck Bertrand",
     assistants: ["Yann Petit"],
     trainings: ["Mardi 18h00 - 19h30", "Jeudi 18h00 - 19h30"],
@@ -130,8 +130,8 @@ const categories: TeamCategory[] = [
     id: "seniors",
     name: "Seniors",
     age: "18+ ans",
-    color: "bg-usbiot-ink dark:bg-white",
-    badgeBg: "bg-usbiot-ink/10 text-usbiot-ink dark:bg-white/10 dark:text-white border-usbiot-ink/20 dark:border-white/20",
+    color: "bg-usbiot-gold-dark",
+    badgeBg: "bg-usbiot-gold/10 text-usbiot-gold-dark border-usbiot-gold/20",
     coach: "Philippe Amar",
     assistants: ["Jérôme Costa", "Stéphane Levy"],
     trainings: ["Mardi 19h30 - 21h00", "Jeudi 19h30 - 21h00"],
@@ -152,7 +152,7 @@ export default function EquipesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(205,183,40,0.15),_transparent_60%)]" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 lg:pt-40 pb-16 lg:pb-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 lg:pt-40 pb-40 lg:pb-48">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

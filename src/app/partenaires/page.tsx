@@ -231,8 +231,8 @@ export default function PartenairesPage() {
                   </span>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-3">
-                    <UsersThree className="w-7 h-7 text-emerald-600" weight="duotone" />
+                  <div className="w-14 h-14 rounded-xl bg-usbiot-gold/10 flex items-center justify-center mb-3">
+                    <UsersThree className="w-7 h-7 text-usbiot-gold-dark" weight="duotone" />
                   </div>
                   <span className="font-heading font-bold text-2xl">300+</span>
                   <span className="text-xs text-muted-foreground uppercase tracking-wider">

@@ -28,12 +28,12 @@ const stats = [
 ];
 
 const categories = [
-  { name: "U7 - U9", age: "5-8 ans", color: "bg-emerald-500" },
-  { name: "U10 - U11", age: "9-10 ans", color: "bg-blue-500" },
-  { name: "U12 - U13", age: "11-12 ans", color: "bg-amber-500" },
-  { name: "U14 - U15", age: "13-14 ans", color: "bg-purple-500" },
-  { name: "U16 - U18", age: "15-17 ans", color: "bg-usbiot-red" },
-  { name: "Seniors", age: "18+ ans", color: "bg-usbiot-ink dark:bg-white" },
+  { name: "U7 - U9", age: "5-8 ans", color: "bg-usbiot-red" },
+  { name: "U10 - U11", age: "9-10 ans", color: "bg-usbiot-gold" },
+  { name: "U12 - U13", age: "11-12 ans", color: "bg-usbiot-red-dark" },
+  { name: "U14 - U15", age: "13-14 ans", color: "bg-usbiot-gold/80" },
+  { name: "U16 - U18", age: "15-17 ans", color: "bg-usbiot-red/80" },
+  { name: "Seniors", age: "18+ ans", color: "bg-usbiot-gold-dark" },
 ];
 
 const values = [
@@ -196,7 +196,7 @@ export default function HomePage() {
           className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2"
         >
           <div className="max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 bg-usbiot-ink dark:bg-card border border-white/[0.06]">
+            <div className="grid grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-usbiot-red to-usbiot-red-dark border border-white/[0.06]">
               {stats.map((stat, i) => (
                 <div
                   key={stat.label}
@@ -257,7 +257,7 @@ export default function HomePage() {
       </section>
 
       {/* CATEGORIES -- dark section for contrast rhythm */}
-      <section className="py-24 md:py-36 bg-usbiot-ink dark:bg-card noise-overlay relative overflow-hidden">
+      <section className="py-24 md:py-36 bg-gradient-to-br from-usbiot-red via-usbiot-red-dark to-usbiot-red noise-overlay relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,_rgba(216,38,28,0.15),_transparent)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="mb-16 md:mb-24 text-center">
@@ -312,7 +312,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-5 gap-6">
             <ScrollReveal className="lg:col-span-3">
-              <Card className="p-0 overflow-hidden border-0 bg-usbiot-ink dark:bg-card relative h-full">
+              <Card className="p-0 overflow-hidden border-0 bg-gradient-to-br from-usbiot-red-dark to-usbiot-red relative h-full">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(216,38,28,0.2),_transparent_70%)]" />
                 <div className="relative z-10 p-8 md:p-10">
                   <div className="flex items-center gap-2 mb-6">

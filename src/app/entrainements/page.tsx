@@ -36,7 +36,7 @@ const trainings: Training[] = [
   {
     category: "U7",
     age: "5-6 ans",
-    color: "bg-emerald-500",
+    color: "bg-usbiot-red",
     sessions: [
       {
         jour: "Mercredi",
@@ -48,7 +48,7 @@ const trainings: Training[] = [
   {
     category: "U9",
     age: "7-8 ans",
-    color: "bg-emerald-600",
+    color: "bg-usbiot-gold",
     sessions: [
       {
         jour: "Mercredi",
@@ -65,7 +65,7 @@ const trainings: Training[] = [
   {
     category: "U10-U11",
     age: "9-10 ans",
-    color: "bg-blue-500",
+    color: "bg-usbiot-red-dark",
     sessions: [
       {
         jour: "Mercredi",
@@ -82,7 +82,7 @@ const trainings: Training[] = [
   {
     category: "U12-U13",
     age: "11-12 ans",
-    color: "bg-amber-500",
+    color: "bg-usbiot-gold/80",
     sessions: [
       {
         jour: "Mardi",
@@ -104,7 +104,7 @@ const trainings: Training[] = [
   {
     category: "U14-U15",
     age: "13-14 ans",
-    color: "bg-purple-500",
+    color: "bg-usbiot-red/80",
     sessions: [
       {
         jour: "Mardi",
@@ -148,7 +148,7 @@ const trainings: Training[] = [
   {
     category: "Seniors",
     age: "18+ ans",
-    color: "bg-usbiot-ink dark:bg-white",
+    color: "bg-usbiot-gold-dark",
     sessions: [
       {
         jour: "Mardi",
