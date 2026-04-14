@@ -23,7 +23,7 @@ import { staggerContainer, staggerItem } from "@/lib/motion";
 const stats = [
   { value: "300+", label: "Licenciés", icon: UsersThree },
   { value: "15+", label: "Équipes", icon: Shield },
-  { value: "40+", label: "Années", icon: Trophy },
+  { value: "75+", label: "Années", icon: Trophy },
   { value: "5/5", label: "Avis Google", icon: Star },
 ];
 
@@ -155,7 +155,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="mt-8 text-white/50 text-lg md:text-xl leading-relaxed max-w-lg"
             >
-              Depuis plus de 40 ans, l&apos;US Biot forme, éduque et fait vibrer
+              Depuis plus de 75 ans, l&apos;US Biot forme, éduque et fait vibrer
               petits et grands par la passion du football sur la Côte d&apos;Azur.
             </motion.p>
 

@@ -49,7 +49,7 @@ const articles: Article[] = [
       "Les stages de vacances reviennent du 20 au 24 avril. Places limitees, reservez des maintenant pour vos enfants.",
     category: "Stage",
     date: "8 Avril 2026",
-    gradient: "from-blue-600 to-blue-800",
+    gradient: "from-usbiot-red-dark to-usbiot-ink",
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ const articles: Article[] = [
       "Le club est fier d'annoncer un nouveau partenariat qui permettra d'equiper toutes les equipes pour la saison prochaine.",
     category: "Club",
     date: "5 Avril 2026",
-    gradient: "from-usbiot-gold to-amber-700",
+    gradient: "from-usbiot-gold to-usbiot-gold-dark",
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const articles: Article[] = [
       "Beau week-end pour les equipes du club avec notamment une victoire ecrasante des U15 face a Villeneuve-Loubet.",
     category: "Match",
     date: "1 Avril 2026",
-    gradient: "from-usbiot-red to-red-800",
+    gradient: "from-usbiot-red to-usbiot-red-dark",
   },
   {
     id: 4,
@@ -76,7 +76,7 @@ const articles: Article[] = [
       "Trois de nos educateurs viennent d'obtenir le Brevet de Moniteur de Football, gage de qualite pour l'encadrement.",
     category: "Formation",
     date: "28 Mars 2026",
-    gradient: "from-emerald-600 to-emerald-800",
+    gradient: "from-usbiot-gold-dark to-usbiot-ink",
   },
   {
     id: 5,
@@ -85,7 +85,7 @@ const articles: Article[] = [
       "Reservez votre soiree ! Remise des trophees, spectacle des jeunes et barbecue geant au programme.",
     category: "Evenement",
     date: "25 Mars 2026",
-    gradient: "from-purple-600 to-purple-800",
+    gradient: "from-usbiot-red via-usbiot-red-dark to-usbiot-ink",
   },
   {
     id: 6,
@@ -94,7 +94,7 @@ const articles: Article[] = [
       "Un stage dedie aux gardiens de but, encadre par un ancien professionnel. Ouvert aux U12 et plus.",
     category: "Stage",
     date: "22 Mars 2026",
-    gradient: "from-sky-600 to-sky-800",
+    gradient: "from-usbiot-red-dark to-usbiot-red",
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ const articles: Article[] = [
       "Apres une saison reguliere, les Seniors assurent leur place en deuxieme division departementale.",
     category: "Match",
     date: "18 Mars 2026",
-    gradient: "from-rose-600 to-rose-800",
+    gradient: "from-usbiot-red to-usbiot-ink",
   },
   {
     id: 8,
@@ -112,7 +112,7 @@ const articles: Article[] = [
       "Venez decouvrir le club, rencontrer les educateurs et assister a des ateliers gratuits pour les enfants de 4 a 12 ans.",
     category: "Club",
     date: "15 Mars 2026",
-    gradient: "from-amber-600 to-amber-800",
+    gradient: "from-usbiot-gold to-usbiot-red-dark",
   },
 ];
 

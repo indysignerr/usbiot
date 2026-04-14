@@ -16,6 +16,9 @@ import {
   CurrencyEur,
   Info,
   SoccerBall,
+  Leaf,
+  Snowflake,
+  Flower,
 } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -76,17 +79,17 @@ const stages = [
   {
     period: "Vacances de la Toussaint",
     dates: "Du 20 au 24 Octobre 2025",
-    icon: "🍂",
+    icon: Leaf,
   },
   {
     period: "Vacances de Fevrier",
     dates: "Du 16 au 20 Fevrier 2026",
-    icon: "❄️",
+    icon: Snowflake,
   },
   {
     period: "Vacances de Paques",
     dates: "Du 13 au 17 Avril 2026",
-    icon: "🌷",
+    icon: Flower,
   },
 ];
 
@@ -214,7 +217,7 @@ export default function InscriptionsPage() {
                     <ul className="space-y-3">
                       {paymentInfo.map((info, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <Check className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" weight="bold" />
+                          <Check className="w-4 h-4 text-usbiot-gold-dark shrink-0 mt-0.5" weight="bold" />
                           <span className="text-sm leading-relaxed">{info}</span>
                         </li>
                       ))}
@@ -245,7 +248,9 @@ export default function InscriptionsPage() {
                           key={stage.period}
                           className="flex items-center gap-4 p-4 rounded-xl bg-muted/50 border border-border/50 hover:border-usbiot-gold/30 transition-colors"
                         >
-                          <div className="text-3xl shrink-0">{stage.icon}</div>
+                          <div className="w-12 h-12 rounded-lg bg-usbiot-red/10 flex items-center justify-center shrink-0">
+                            <stage.icon className="w-6 h-6 text-usbiot-red" weight="duotone" />
+                          </div>
                           <div className="flex-1">
                             <div className="font-heading font-bold text-sm">
                               {stage.period}
@@ -321,7 +326,7 @@ export default function InscriptionsPage() {
                       <doc.icon className="w-5 h-5 text-usbiot-gold-dark" weight="duotone" />
                     </div>
                     <div className="flex items-center gap-3 min-h-10">
-                      <Check className="w-4 h-4 text-emerald-500 shrink-0" weight="bold" />
+                      <Check className="w-4 h-4 text-usbiot-gold-dark shrink-0" weight="bold" />
                       <p className="text-sm leading-relaxed">{doc.label}</p>
                     </div>
                   </div>

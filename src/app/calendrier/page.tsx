@@ -597,10 +597,10 @@ export default function CalendrierPage() {
                       <Card
                         className={`transition-all ${
                           win
-                            ? "ring-1 ring-emerald-500/30"
+                            ? "ring-1 ring-usbiot-gold/40"
                             : draw
-                              ? "ring-1 ring-amber-500/30"
-                              : "ring-1 ring-red-500/20"
+                              ? "ring-1 ring-usbiot-gold/20"
+                              : "ring-1 ring-usbiot-red/20"
                         }`}
                       >
                         <CardContent className="px-4 py-4">
