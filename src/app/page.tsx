@@ -110,7 +110,7 @@ export default function HomePage() {
             alt=""
             width={440}
             height={520}
-            className="opacity-[0.08]"
+            className="opacity-25"
             priority
             aria-hidden
           />
@@ -354,7 +354,7 @@ export default function HomePage() {
                           alt="Adversaire"
                           width={36}
                           height={42}
-                          className="opacity-20 drop-shadow-sm"
+                          className="opacity-30 drop-shadow-sm"
                         />
                       </div>
                       <span className="font-heading font-bold text-sm text-white/50">Adversaire</span>
@@ -374,7 +374,7 @@ export default function HomePage() {
               <Card className="p-0 overflow-hidden border-0 relative h-full bg-gradient-to-br from-usbiot-gold via-usbiot-gold to-usbiot-gold-dark">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.15),_transparent_60%)]" />
                 {/* Logo watermark */}
-                <div className="absolute bottom-4 right-4 opacity-[0.06] pointer-events-none">
+                <div className="absolute bottom-4 right-4 opacity-20 pointer-events-none">
                   <Image
                     src="/images/logo-usbiot.png"
                     alt=""
@@ -457,7 +457,7 @@ export default function HomePage() {
                           alt=""
                           width={20}
                           height={24}
-                          className="opacity-40"
+                          className="opacity-70"
                           aria-hidden
                         />
                       </div>
