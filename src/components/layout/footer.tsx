@@ -181,9 +181,15 @@ export function Footer() {
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/40">
             <p>&copy; {new Date().getFullYear()} US Biot Football. Tous droits reserves.</p>
-            <p>
-              Fait avec passion pour le football
-            </p>
+            <div className="flex items-center gap-4">
+              <Link href="/mentions-legales" className="hover:text-white transition-colors">
+                Mentions legales
+              </Link>
+              <span className="text-white/20">|</span>
+              <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">
+                Politique de confidentialite
+              </Link>
+            </div>
           </div>
         </div>
       </div>
