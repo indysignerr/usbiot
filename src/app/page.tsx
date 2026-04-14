@@ -90,14 +90,13 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO -- cinematic, editorial, left-aligned */}
-      <section className="relative min-h-[100dvh] flex flex-col justify-end overflow-hidden noise-overlay">
+      {/* ═══ HERO ═══ cinematic, editorial, left-aligned */}
+      <section className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden noise-overlay">
         <div className="absolute inset-0 bg-usbiot-ink" />
         <div className="absolute inset-0 bg-gradient-to-b from-usbiot-red/90 via-usbiot-red-dark/70 to-usbiot-ink" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,_rgba(216,38,28,0.4),_transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,_rgba(205,183,40,0.12),_transparent)]" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-usbiot-gold/[0.06] via-transparent to-transparent skew-x-[-6deg] origin-top-right" />
-        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
         {/* Ghost watermark logo */}
         <motion.div
@@ -117,7 +116,7 @@ export default function HomePage() {
           />
         </motion.div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 lg:pt-40 pb-48 md:pb-56 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 lg:pt-40 w-full">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -187,39 +186,39 @@ export default function HomePage() {
               </Link>
             </motion.div>
           </motion.div>
-        </div>
 
+          {/* STATS — inside hero, always visible */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-16 md:mt-20 mb-12"
+          >
+            <div className="max-w-4xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 bg-white/[0.06] backdrop-blur-sm border border-white/[0.08]">
+                {stats.map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    className={`p-5 md:p-6 text-center relative ${
+                      i < stats.length - 1 ? "md:border-r border-white/[0.06]" : ""
+                    } ${i < 2 ? "border-b md:border-b-0 border-white/[0.06]" : ""} group hover:bg-white/[0.04] transition-colors duration-500`}
+                  >
+                    <stat.icon className="w-5 h-5 text-usbiot-gold mx-auto mb-2 opacity-60 group-hover:opacity-100 transition-opacity" weight="duotone" />
+                    <div className="text-2xl md:text-3xl font-heading font-extrabold text-white tracking-tight">
+                      {stat.value}
+                    </div>
+                    <div className="text-[10px] text-white/40 uppercase tracking-[0.2em] font-semibold mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
-      {/* STATS BAR -- inline below hero */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <div className="max-w-5xl mx-auto px-6 -mt-16 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-usbiot-red to-usbiot-red-dark border border-white/[0.06]">
-            {stats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`p-6 md:p-8 text-center relative ${
-                  i < stats.length - 1 ? "md:border-r border-white/[0.06]" : ""
-                } ${i < 2 ? "border-b md:border-b-0 border-white/[0.06]" : ""} group hover:bg-white/[0.03] transition-colors duration-500`}
-              >
-                <stat.icon className="w-5 h-5 text-usbiot-gold mx-auto mb-3 opacity-50 group-hover:opacity-100 transition-opacity" weight="duotone" />
-                <div className="text-3xl md:text-4xl font-heading font-extrabold text-white tracking-tight">
-                  {stat.value}
-                </div>
-                <div className="text-[10px] text-white/35 uppercase tracking-[0.2em] font-semibold mt-1">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* VALUES -- grid with gap-px for editorial divider look */}
+      {/* ═══ VALUES ═══ */}
       <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
@@ -254,7 +253,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CATEGORIES -- dark section for contrast rhythm */}
+      {/* ═══ CATEGORIES ═══ dark section */}
       <section className="py-24 md:py-36 bg-gradient-to-br from-usbiot-red via-usbiot-red-dark to-usbiot-red noise-overlay relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,_rgba(216,38,28,0.15),_transparent)]" />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -312,7 +311,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEXT MATCH + CTA -- asymmetric split */}
+      {/* ═══ NEXT MATCH + CTA ═══ */}
       <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-5 gap-6">
@@ -321,28 +320,30 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(216,38,28,0.2),_transparent_70%)]" />
                 <div className="relative z-10 p-8 md:p-10">
                   <div className="flex items-center gap-2 mb-6">
-                    <CalendarBlank className="w-5 h-5 text-usbiot-red-light" weight="duotone" />
-                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-usbiot-red-light">
+                    <CalendarBlank className="w-5 h-5 text-usbiot-gold" weight="duotone" />
+                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-usbiot-gold">
                       Prochain Match
                     </span>
                   </div>
                   <div className="flex items-center justify-between mb-8">
                     <div className="text-center">
-                      <Image
-                        src="/images/logo-usbiot.png"
-                        alt="US Biot"
-                        width={64}
-                        height={76}
-                        className="mx-auto mb-3 brightness-0 invert"
-                      />
+                      <div className="w-16 h-[76px] flex items-center justify-center mb-3 mx-auto">
+                        <Image
+                          src="/images/logo-usbiot.png"
+                          alt="US Biot"
+                          width={52}
+                          height={62}
+                          className="brightness-0 invert"
+                        />
+                      </div>
                       <span className="font-heading font-bold text-sm text-white">US Biot</span>
                     </div>
                     <div className="text-center px-8">
-                      <div className="text-[11px] text-white/40 uppercase tracking-[0.15em] mb-2">
+                      <div className="text-[11px] text-white/50 uppercase tracking-[0.15em] mb-2">
                         Samedi 19 Avril
                       </div>
-                      <div className="font-heading font-extrabold text-usbiot-red-light" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>VS</div>
-                      <div className="text-xs text-white/40 mt-1">
+                      <div className="font-heading font-extrabold text-usbiot-gold" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>VS</div>
+                      <div className="text-xs text-white/50 mt-1">
                         15:00 - Stade René Cuicala
                       </div>
                     </div>
@@ -351,17 +352,18 @@ export default function HomePage() {
                         <Image
                           src="/images/logo-usbiot.png"
                           alt="Adversaire"
-                          width={40}
-                          height={47}
-                          className="opacity-30 brightness-0 invert"
+                          width={36}
+                          height={42}
+                          className="opacity-20 brightness-0 invert"
                         />
                       </div>
-                      <span className="font-heading font-bold text-sm text-white/60">Adversaire</span>
+                      <span className="font-heading font-bold text-sm text-white/50">Adversaire</span>
                     </div>
                   </div>
                   <Link href="/calendrier">
-                    <Button variant="ghost" className="w-full font-semibold border border-white/20 text-white bg-transparent hover:bg-white/10 rounded-none h-12">
+                    <Button className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold rounded-none h-12 border border-white/10">
                       Voir le calendrier complet
+                      <ArrowRight className="w-4 h-4 ml-2" weight="bold" />
                     </Button>
                   </Link>
                 </div>
@@ -371,6 +373,16 @@ export default function HomePage() {
             <ScrollReveal delay={0.1} className="lg:col-span-2">
               <Card className="p-0 overflow-hidden border-0 relative h-full bg-gradient-to-br from-usbiot-gold via-usbiot-gold to-usbiot-gold-dark">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(255,255,255,0.15),_transparent_60%)]" />
+                {/* Logo watermark */}
+                <div className="absolute bottom-4 right-4 opacity-[0.06] pointer-events-none">
+                  <Image
+                    src="/images/logo-usbiot.png"
+                    alt=""
+                    width={120}
+                    height={142}
+                    aria-hidden
+                  />
+                </div>
                 <div className="relative z-10 p-8 md:p-10 flex flex-col justify-between h-full">
                   <div>
                     <div className="flex items-center gap-2 mb-6">
@@ -397,7 +409,7 @@ export default function HomePage() {
                       </Button>
                     </Link>
                     <Link href="/inscriptions#stages">
-                      <Button variant="outline" className="w-full font-semibold mt-2 border-usbiot-red-dark/30 text-usbiot-red-dark hover:bg-usbiot-red-dark/10 rounded-none h-12">
+                      <Button className="w-full font-semibold mt-2 bg-usbiot-ink/10 hover:bg-usbiot-ink/20 text-usbiot-ink border border-usbiot-ink/20 rounded-none h-12">
                         Stages de vacances
                       </Button>
                     </Link>
@@ -409,7 +421,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* TESTIMONIALS -- left accent bar for editorial feel */}
+      {/* ═══ TESTIMONIALS ═══ */}
       <section className="py-24 md:py-36 bg-muted/50 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-usbiot-red/[0.04] rounded-full blur-3xl" />
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -439,8 +451,15 @@ export default function HomePage() {
                       &ldquo;{t.text}&rdquo;
                     </p>
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-usbiot-red/10 flex items-center justify-center text-usbiot-red font-heading font-bold text-sm">
-                        {t.name.charAt(0)}
+                      <div className="w-8 h-8 bg-usbiot-red/10 flex items-center justify-center overflow-hidden">
+                        <Image
+                          src="/images/logo-usbiot.png"
+                          alt=""
+                          width={20}
+                          height={24}
+                          className="opacity-40"
+                          aria-hidden
+                        />
                       </div>
                       <div>
                         <div className="font-heading font-bold text-sm tracking-tight">{t.name}</div>
@@ -455,7 +474,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LOCATION */}
+      {/* ═══ LOCATION ═══ */}
       <section className="py-24 md:py-36">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
