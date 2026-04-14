@@ -278,7 +278,7 @@ export default function HomePage() {
                 <Link href="/equipes" className="group block">
                   <div className="p-6 text-center border border-white/[0.06] hover:border-usbiot-gold/30 transition-all duration-500 hover:bg-white/[0.03] relative overflow-hidden">
                     <div
-                      className={`w-12 h-12 ${cat.color} mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center`}
+                      className="w-12 h-12 bg-white rounded-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center shadow-sm"
                     >
                       <Image
                         src="/images/logo-usbiot.png"
@@ -349,13 +349,7 @@ export default function HomePage() {
                     </div>
                     <div className="text-center">
                       <div className="w-16 h-[76px] bg-white/[0.06] flex items-center justify-center mb-3 mx-auto">
-                        <Image
-                          src="/images/logo-usbiot.png"
-                          alt="Adversaire"
-                          width={36}
-                          height={42}
-                          className="opacity-30 drop-shadow-sm"
-                        />
+                        <span className="text-2xl font-heading font-bold text-white/20">?</span>
                       </div>
                       <span className="font-heading font-bold text-sm text-white/50">Adversaire</span>
                     </div>
