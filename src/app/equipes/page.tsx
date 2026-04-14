@@ -378,7 +378,10 @@ export default function EquipesPage() {
                         <Badge className={cat.badgeBg}>
                           {cat.name} — {cat.age}
                         </Badge>
-                        <Badge variant="outline">{cat.level}</Badge>
+                        <div className="flex items-center gap-2">
+                          <Image src="/images/logo-usbiot.png" alt="US Biot" width={20} height={20} className="object-contain" />
+                          <span className="text-xs font-medium text-muted-foreground">{cat.level}</span>
+                        </div>
                       </div>
                       <h3 className="font-heading text-2xl font-bold mb-3">
                         Équipe {cat.name}
@@ -496,9 +499,10 @@ export default function EquipesPage() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-muted-foreground">Niveau</span>
-                      <Badge variant="outline" className="text-xs">
-                        {cat.level}
-                      </Badge>
+                      <div className="flex items-center gap-2">
+                        <Image src="/images/logo-usbiot.png" alt="US Biot" width={18} height={18} className="object-contain" />
+                        <span className="text-xs font-medium">{cat.level}</span>
+                      </div>
                     </div>
                   </div>
 

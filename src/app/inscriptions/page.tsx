@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -259,9 +260,10 @@ export default function InscriptionsPage() {
                               {stage.dates}
                             </div>
                           </div>
-                          <Badge variant="outline" className="shrink-0 font-semibold text-xs border-usbiot-gold/30 text-usbiot-gold-dark">
-                            1 semaine
-                          </Badge>
+                          <div className="flex items-center gap-2 shrink-0">
+                            <Image src="/images/logo-usbiot.png" alt="US Biot" width={20} height={20} className="object-contain" />
+                            <span className="text-xs font-semibold text-usbiot-gold-dark">1 semaine</span>
+                          </div>
                         </div>
                       ))}
                     </div>

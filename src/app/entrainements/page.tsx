@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   MapPin,
@@ -370,9 +371,10 @@ export default function EntrainementsPage() {
                       <CardTitle className="text-base">
                         {t.category}
                       </CardTitle>
-                      <Badge variant="outline" className="text-xs ml-auto">
-                        {t.age}
-                      </Badge>
+                      <div className="flex items-center gap-2 ml-auto">
+                        <Image src="/images/logo-usbiot.png" alt="US Biot" width={20} height={20} className="object-contain" />
+                        <span className="text-xs text-muted-foreground font-medium">{t.age}</span>
+                      </div>
                     </div>
                     {t.coaches.length > 0 && (
                       <p className="text-xs text-muted-foreground mt-1">
