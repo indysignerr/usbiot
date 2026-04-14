@@ -63,7 +63,7 @@ export function Footer() {
                   alt="US Biot Football"
                   width={48}
                   height={56}
-                  className="brightness-0 invert"
+                  className=""
                 />
                 <div>
                   <span className="font-heading text-xl font-bold">US Biot</span>
@@ -170,7 +170,7 @@ export function Footer() {
                 </a>
                 <div className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" weight="regular" />
-                  <span>Stade Rene Cuicala, Biot 06410</span>
+                  <span>Stade Pierre Bel, Biot 06410</span>
                 </div>
               </div>
             </div>

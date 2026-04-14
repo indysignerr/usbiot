@@ -110,7 +110,7 @@ export default function HomePage() {
             alt=""
             width={440}
             height={520}
-            className="opacity-[0.07] brightness-0 invert"
+            className="opacity-[0.08]"
             priority
             aria-hidden
           />
@@ -285,7 +285,7 @@ export default function HomePage() {
                         alt=""
                         width={28}
                         height={33}
-                        className="brightness-0 invert"
+                        className="drop-shadow-sm"
                         aria-hidden
                       />
                     </div>
@@ -333,7 +333,7 @@ export default function HomePage() {
                           alt="US Biot"
                           width={52}
                           height={62}
-                          className="brightness-0 invert"
+                          className="drop-shadow-sm"
                         />
                       </div>
                       <span className="font-heading font-bold text-sm text-white">US Biot</span>
@@ -344,7 +344,7 @@ export default function HomePage() {
                       </div>
                       <div className="font-heading font-extrabold text-usbiot-gold" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>VS</div>
                       <div className="text-xs text-white/50 mt-1">
-                        15:00 - Stade René Cuicala
+                        15:00 - Stade Pierre Bel
                       </div>
                     </div>
                     <div className="text-center">
@@ -354,7 +354,7 @@ export default function HomePage() {
                           alt="Adversaire"
                           width={36}
                           height={42}
-                          className="opacity-20 brightness-0 invert"
+                          className="opacity-20 drop-shadow-sm"
                         />
                       </div>
                       <span className="font-heading font-bold text-sm text-white/50">Adversaire</span>
@@ -479,20 +479,20 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             label="Nous Trouver"
-            title="Stade René Cuicala"
+            title="Stade Pierre Bel"
             description="Au cœur de Biot, des installations modernes pour la pratique du football."
           />
           <ScrollReveal>
             <div className="overflow-hidden border border-border/50">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d7.0964!3d43.6275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cc2c0f12345678%3A0x0!2sStade+Ren%C3%A9+Cuicala+Biot!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d7.0964!3d43.6275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cc2c0f12345678%3A0x0!2sStade+Pierre+Bel+Biot!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation du Stade René Cuicala, Biot"
+                title="Localisation du Stade Pierre Bel, Biot"
               />
             </div>
           </ScrollReveal>

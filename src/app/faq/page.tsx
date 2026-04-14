@@ -43,7 +43,7 @@ const faqSections = [
       },
       {
         q: "Quand peut-on s'inscrire pour la prochaine saison ?",
-        a: "Les inscriptions pour la saison 2025-2026 ouvrent generalement fin mai pour les renouvellements et mi-juin pour les nouvelles inscriptions. Nous organisons des journees d'inscription au stade Rene Cuicala. Il est conseille de s'inscrire le plus tot possible car certaines categories peuvent etre completes. Suivez nos reseaux sociaux pour connaitre les dates exactes.",
+        a: "Les inscriptions pour la saison 2025-2026 ouvrent generalement fin mai pour les renouvellements et mi-juin pour les nouvelles inscriptions. Nous organisons des journees d'inscription au stade Pierre Bel. Il est conseille de s'inscrire le plus tot possible car certaines categories peuvent etre completes. Suivez nos reseaux sociaux pour connaitre les dates exactes.",
       },
       {
         q: "Peut-on etre rembourse en cas de desistement ?",
@@ -66,7 +66,7 @@ const faqSections = [
       },
       {
         q: "Que se passe-t-il en cas de pluie ou mauvais temps ?",
-        a: "Le terrain synthetique du stade Rene Cuicala permet de s'entrainer dans la plupart des conditions meteorologiques. Seuls les orages violents, les vents tres forts ou le gel peuvent entrainer une annulation. En cas d'annulation, les educateurs previennent les parents via le groupe WhatsApp de l'equipe au plus tard 1 heure avant l'entrainement.",
+        a: "Le terrain synthetique du stade Pierre Bel permet de s'entrainer dans la plupart des conditions meteorologiques. Seuls les orages violents, les vents tres forts ou le gel peuvent entrainer une annulation. En cas d'annulation, les educateurs previennent les parents via le groupe WhatsApp de l'equipe au plus tard 1 heure avant l'entrainement.",
       },
       {
         q: "Comment se passent les premiers entrainements ?",
@@ -119,15 +119,15 @@ const faqSections = [
     questions: [
       {
         q: "Y a-t-il un parking au stade ?",
-        a: "Oui, un parking gratuit est disponible a proximite immediate du stade Rene Cuicala. Il dispose d'environ 50 places. Les jours de match ou de tournoi, le parking peut etre sature : nous recommandons alors de se garer dans les rues adjacentes ou d'utiliser le covoiturage. L'acces au stade est egalement possible a pied depuis le centre de Biot (10 minutes).",
+        a: "Oui, un parking gratuit est disponible a proximite immediate du stade Pierre Bel. Il dispose d'environ 50 places. Les jours de match ou de tournoi, le parking peut etre sature : nous recommandons alors de se garer dans les rues adjacentes ou d'utiliser le covoiturage. L'acces au stade est egalement possible a pied depuis le centre de Biot (10 minutes).",
       },
       {
         q: "Le club dispose-t-il de vestiaires ?",
-        a: "Le stade Rene Cuicala dispose de vestiaires modernes et recemment renoves. Chaque equipe a acces a un vestiaire equipe de douches, bancs et casiers. Les vestiaires sont accessibles 30 minutes avant et apres les entrainements et matchs. Nous demandons aux joueurs de respecter la proprete des lieux et de ne pas laisser d'objets de valeur sans surveillance.",
+        a: "Le stade Pierre Bel dispose de vestiaires modernes et recemment renoves. Chaque equipe a acces a un vestiaire equipe de douches, bancs et casiers. Les vestiaires sont accessibles 30 minutes avant et apres les entrainements et matchs. Nous demandons aux joueurs de respecter la proprete des lieux et de ne pas laisser d'objets de valeur sans surveillance.",
       },
       {
         q: "Comment contacter le club pour plus d'informations ?",
-        a: "Plusieurs moyens de nous joindre : par telephone au 06 89 98 36 61 (egalement joignable sur WhatsApp), par email a usbiot.secretariat@gmail.com, ou directement au stade Rene Cuicala aux horaires de permanence (mercredi 14h-18h et samedi 9h-12h). Vous pouvez aussi nous suivre sur Facebook et Instagram (@usbiotfootball) pour toute l'actualite du club.",
+        a: "Plusieurs moyens de nous joindre : par telephone au 06 89 98 36 61 (egalement joignable sur WhatsApp), par email a usbiot.secretariat@gmail.com, ou directement au stade Pierre Bel aux horaires de permanence (mercredi 14h-18h et samedi 9h-12h). Vous pouvez aussi nous suivre sur Facebook et Instagram (@usbiotfootball) pour toute l'actualite du club.",
       },
     ],
   },

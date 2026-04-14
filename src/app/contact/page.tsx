@@ -44,9 +44,9 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Adresse",
-    value: "Stade Rene Cuicala",
+    value: "Stade Pierre Bel",
     description: "Biot 06410",
-    href: "https://maps.google.com/?q=Stade+Rene+Cuicala+Biot+06410",
+    href: "https://maps.google.com/?q=Stade+Pierre+Bel+Biot+06410",
   },
 ];
 
@@ -338,20 +338,20 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             label="Nous trouver"
-            title="Stade Rene Cuicala"
+            title="Stade Pierre Bel"
             description="Chemin de la Brague, 06410 Biot — a 5 minutes de Sophia Antipolis et d'Antibes."
           />
           <ScrollReveal>
             <div className="rounded-2xl overflow-hidden border border-border/50 aspect-[16/7]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d7.0754!3d43.6286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cc2b3f3a6e3e3d%3A0x1234567890abcdef!2sStade%20Ren%C3%A9%20Cuicala%2C%2006410%20Biot!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d7.0754!3d43.6286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cc2b3f3a6e3e3d%3A0x1234567890abcdef!2sStade%20Pierre%20Bel%2C%2006410%20Biot!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localisation du Stade Rene Cuicala, Biot"
+                title="Localisation du Stade Pierre Bel, Biot"
                 className="w-full h-full"
               />
             </div>

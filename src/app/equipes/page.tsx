@@ -478,7 +478,7 @@ export default function EquipesPage() {
                         alt=""
                         width={24}
                         height={28}
-                        className="brightness-0 invert"
+                        className="drop-shadow-sm"
                         aria-hidden
                       />
                     </div>
