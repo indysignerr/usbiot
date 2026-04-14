@@ -219,7 +219,7 @@ export default function HomePage() {
       </section>
 
       {/* Spacer for overlapping stats */}
-      <div className="h-20 md:h-24" />
+      <div className="h-28 md:h-32" />
 
       {/* VALUES -- grid with gap-px for editorial divider look */}
       <section className="py-24 md:py-36">
@@ -283,7 +283,14 @@ export default function HomePage() {
                     <div
                       className={`w-12 h-12 ${cat.color} mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center`}
                     >
-                      <Shield className="w-6 h-6 text-white" weight="duotone" />
+                      <Image
+                        src="/images/logo-usbiot.png"
+                        alt=""
+                        width={28}
+                        height={33}
+                        className="brightness-0 invert"
+                        aria-hidden
+                      />
                     </div>
                     <div className="font-heading font-bold text-white text-sm tracking-tight">
                       {cat.name}
@@ -343,7 +350,13 @@ export default function HomePage() {
                     </div>
                     <div className="text-center">
                       <div className="w-16 h-[76px] bg-white/[0.06] flex items-center justify-center mb-3 mx-auto">
-                        <Shield className="w-8 h-8 text-white/30" weight="duotone" />
+                        <Image
+                          src="/images/logo-usbiot.png"
+                          alt="Adversaire"
+                          width={40}
+                          height={47}
+                          className="opacity-30 brightness-0 invert"
+                        />
                       </div>
                       <span className="font-heading font-bold text-sm text-white/60">Adversaire</span>
                     </div>
@@ -380,13 +393,13 @@ export default function HomePage() {
                   </div>
                   <div className="space-y-3">
                     <Link href="/inscriptions">
-                      <Button className="w-full bg-usbiot-ink hover:bg-usbiot-ink/90 text-usbiot-gold font-bold rounded-none h-12">
+                      <Button className="w-full bg-usbiot-red hover:bg-usbiot-red-dark text-white font-bold rounded-none h-12">
                         Inscription au club
                         <ArrowRight className="w-4 h-4 ml-2" weight="bold" />
                       </Button>
                     </Link>
                     <Link href="/inscriptions#stages">
-                      <Button variant="outline" className="w-full font-semibold mt-2 border-usbiot-ink/20 text-usbiot-ink hover:bg-usbiot-ink/10 rounded-none h-12">
+                      <Button variant="outline" className="w-full font-semibold mt-2 border-usbiot-red-dark/30 text-usbiot-red-dark hover:bg-usbiot-red-dark/10 rounded-none h-12">
                         Stages de vacances
                       </Button>
                     </Link>
