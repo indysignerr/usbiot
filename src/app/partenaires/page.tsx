@@ -1,175 +1,58 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Handshake, ArrowRight, Star, Buildings, UsersThree } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
-import { SectionHeading } from "@/components/shared/section-heading";
 import { staggerContainer, staggerItem } from "@/lib/motion";
 
 interface Partner {
   name: string;
-  description: string;
-  gradient: string;
-  initials: string;
+  logo: string;
 }
 
-const mainPartners: Partner[] = [
-  {
-    name: "Mairie de Biot",
-    description:
-      "Partenaire historique du club, la commune de Biot soutient le developpement du football sur son territoire et finance les infrastructures sportives.",
-    gradient: "from-blue-600 to-blue-800",
-    initials: "MB",
-  },
-  {
-    name: "Sport 2000 Antibes",
-    description:
-      "Equipementier officiel du club, Sport 2000 fournit les tenues de match et d'entrainement pour toutes les equipes de l'US Biot.",
-    gradient: "from-usbiot-red to-usbiot-red-dark",
-    initials: "S2",
-  },
-  {
-    name: "Azur Credit Immobilier",
-    description:
-      "Courtier en prets immobiliers sur la Cote d'Azur, partenaire principal maillot de l'equipe Seniors depuis 2022.",
-    gradient: "from-usbiot-gold to-amber-700",
-    initials: "AC",
-  },
+const partners: Partner[] = [
+  { name: "R2C Concept", logo: "/images/partenaires/r2c-concept.avif" },
+  { name: "SAP", logo: "/images/partenaires/sap.avif" },
+  { name: "Trophées Sport", logo: "/images/partenaires/trophees-sport.avif" },
+  { name: "Boucherie du Migranier", logo: "/images/partenaires/boucherie-du-migranier.avif" },
+  { name: "Caraglio Expert Comptable", logo: "/images/partenaires/caraglio-expert-comptable.avif" },
+  { name: "CSF", logo: "/images/partenaires/csf.avif" },
+  { name: "GAN", logo: "/images/partenaires/gan.avif" },
+  { name: "Inkcut Barber Tattoo", logo: "/images/partenaires/inkcut-barber-tatoo.avif" },
+  { name: "L'Ovive", logo: "/images/partenaires/l-ovive-logo.avif" },
+  { name: "JSP", logo: "/images/partenaires/logo-jsp.avif" },
+  { name: "Marco Déco", logo: "/images/partenaires/marco-deco.avif" },
+  { name: "Marra Construction", logo: "/images/partenaires/marra-construction.avif" },
+  { name: "Multi Tech", logo: "/images/partenaires/multi-tech.avif" },
+  { name: "Opticien du Cap", logo: "/images/partenaires/opticien-du-cap.avif" },
+  { name: "Provence Travaux", logo: "/images/partenaires/provence-travaux.avif" },
+  { name: "R&D Construction", logo: "/images/partenaires/r-d-construction.avif" },
+  { name: "Ruvalor", logo: "/images/partenaires/ruvalor.avif" },
+  { name: "Sacla Italia", logo: "/images/partenaires/sacla-italia.avif" },
+  { name: "Stamp Publicité", logo: "/images/partenaires/stamp-publicite.avif" },
 ];
 
-const officialPartners: Partner[] = [
-  {
-    name: "Boulangerie du Village",
-    description:
-      "Fournisseur officiel des gouters d'apres-match pour les jeunes categories.",
-    gradient: "from-amber-500 to-amber-700",
-    initials: "BV",
-  },
-  {
-    name: "Pharmacie de Biot",
-    description:
-      "Partenaire sante du club, accompagne les equipes dans la prevention et le soin.",
-    gradient: "from-emerald-500 to-emerald-700",
-    initials: "PB",
-  },
-  {
-    name: "Auto-Ecole Biotoise",
-    description:
-      "Partenaire mobilite, offre des tarifs preferentiels aux licencies du club.",
-    gradient: "from-sky-500 to-sky-700",
-    initials: "AE",
-  },
-  {
-    name: "Restaurant Le Provencal",
-    description:
-      "Accueille les repas d'equipe et les evenements du club tout au long de la saison.",
-    gradient: "from-rose-500 to-rose-700",
-    initials: "LP",
-  },
-  {
-    name: "Garage Meca-Biot",
-    description:
-      "Entretien du parc automobile du club et sponsor des deplacements en exterieur.",
-    gradient: "from-slate-500 to-slate-700",
-    initials: "GM",
-  },
-];
-
-const regularPartners: Partner[] = [
-  {
-    name: "Pizza Nico",
-    description: "Sponsor des tournois et soirees du club.",
-    gradient: "from-orange-500 to-orange-700",
-    initials: "PN",
-  },
-  {
-    name: "Optique Riviera",
-    description: "Soutien financier et dotations pour les equipes jeunes.",
-    gradient: "from-violet-500 to-violet-700",
-    initials: "OR",
-  },
-  {
-    name: "Plomberie Azureenne",
-    description: "Partenaire technique pour l'entretien des installations.",
-    gradient: "from-cyan-500 to-cyan-700",
-    initials: "PA",
-  },
-  {
-    name: "Cabinet Martin Avocats",
-    description: "Conseil juridique et partenaire fidele du club.",
-    gradient: "from-indigo-500 to-indigo-700",
-    initials: "CM",
-  },
-  {
-    name: "Fleurs de Biot",
-    description: "Decorations pour les evenements et ceremonies du club.",
-    gradient: "from-pink-500 to-pink-700",
-    initials: "FB",
-  },
-  {
-    name: "Imprimerie Sophia",
-    description: "Impression des programmes de match et supports de communication.",
-    gradient: "from-teal-500 to-teal-700",
-    initials: "IS",
-  },
-  {
-    name: "Assurance Dubois",
-    description: "Couverture des licencies et des evenements du club.",
-    gradient: "from-red-500 to-red-700",
-    initials: "AD",
-  },
-  {
-    name: "Informatique Cote d'Azur",
-    description: "Support informatique et gestion du site web du club.",
-    gradient: "from-gray-500 to-gray-700",
-    initials: "IC",
-  },
-];
-
-function PartnerCard({
-  partner,
-  size = "regular",
-}: {
-  partner: Partner;
-  size?: "large" | "medium" | "regular";
-}) {
-  const logoSize =
-    size === "large"
-      ? "w-24 h-24 text-3xl"
-      : size === "medium"
-        ? "w-16 h-16 text-xl"
-        : "w-12 h-12 text-base";
-
+function PartnerCard({ partner }: { partner: Partner }) {
   return (
-    <Card
-      className={`p-6 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border-border/50 ${
-        size === "large" ? "md:p-8" : ""
-      }`}
-    >
-      <div className="flex flex-col items-center text-center">
-        <div
-          className={`${logoSize} bg-gradient-to-br ${partner.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform font-heading font-bold text-white`}
-        >
-          {partner.initials}
+    <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border-border/50 bg-white dark:bg-card">
+      <div className="flex flex-col items-center text-center gap-4">
+        <div className="relative w-[160px] h-[80px] flex items-center justify-center">
+          <Image
+            src={partner.logo}
+            alt={`Logo ${partner.name}`}
+            fill
+            className="object-contain group-hover:scale-105 transition-transform duration-300"
+            sizes="160px"
+          />
         </div>
-        <h3
-          className={`font-heading font-bold mb-2 ${
-            size === "large" ? "text-xl" : size === "medium" ? "text-lg" : "text-base"
-          }`}
-        >
+        <h3 className="font-heading font-bold text-sm leading-tight">
           {partner.name}
         </h3>
-        <p
-          className={`text-muted-foreground leading-relaxed ${
-            size === "large" ? "text-base" : "text-sm"
-          }`}
-        >
-          {partner.description}
-        </p>
       </div>
     </Card>
   );
@@ -198,9 +81,9 @@ export default function PartenairesPage() {
               Nos <span className="text-usbiot-gold">Partenaires</span>
             </h1>
             <p className="mt-6 text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-              Le succes de l&apos;US Biot repose sur le soutien precieux de nos
-              partenaires locaux et regionaux. Ensemble, nous faisons grandir le
-              football a Biot.
+              Le succès de l&apos;US Biot repose sur le soutien précieux de nos
+              partenaires locaux et régionaux. Ensemble, nous faisons grandir le
+              football à Biot.
             </p>
           </motion.div>
         </div>
@@ -216,7 +99,7 @@ export default function PartenairesPage() {
                   <div className="w-14 h-14 rounded-xl bg-usbiot-red/10 flex items-center justify-center mb-3">
                     <Handshake className="w-7 h-7 text-usbiot-red" weight="duotone" />
                   </div>
-                  <span className="font-heading font-bold text-2xl">16+</span>
+                  <span className="font-heading font-bold text-2xl">19</span>
                   <span className="text-xs text-muted-foreground uppercase tracking-wider">
                     Partenaires
                   </span>
@@ -236,87 +119,46 @@ export default function PartenairesPage() {
                   </div>
                   <span className="font-heading font-bold text-2xl">300+</span>
                   <span className="text-xs text-muted-foreground uppercase tracking-wider">
-                    Licencies soutenus
+                    Licenciés soutenus
                   </span>
                 </div>
               </div>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Nos partenaires jouent un role essentiel dans la vie du club.
-                Grace a leur soutien, nous pouvons offrir les meilleures
-                conditions d&apos;entrainement, organiser des evenements de qualite
-                et accompagner nos 300 licencies tout au long de la saison.
+                Nos partenaires jouent un rôle essentiel dans la vie du club.
+                Grâce à leur soutien, nous pouvons offrir les meilleures
+                conditions d&apos;entraînement, organiser des événements de qualité
+                et accompagner nos 300 licenciés tout au long de la saison.
               </p>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* MAIN PARTNERS */}
+      {/* ALL PARTNERS GRID */}
       <section className="py-24 md:py-36 bg-muted/50">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            label="Premium"
-            title="Partenaires Principaux"
-            description="Nos partenaires majeurs qui soutiennent le club au plus haut niveau."
-          />
+          <div className="text-center mb-16">
+            <Badge className="mb-4 bg-usbiot-red/10 text-usbiot-red border-usbiot-red/20 font-semibold uppercase tracking-wider text-xs">
+              Saison 2025-2026
+            </Badge>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+              Nos Partenaires
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Merci à toutes les entreprises qui soutiennent le club et
+              contribuent au développement du football à Biot.
+            </p>
+          </div>
           <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, margin: "-80px" }}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5"
           >
-            {mainPartners.map((partner) => (
+            {partners.map((partner) => (
               <motion.div key={partner.name} variants={staggerItem}>
-                <PartnerCard partner={partner} size="large" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* OFFICIAL PARTNERS */}
-      <section className="py-24 md:py-36">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            label="Officiels"
-            title="Partenaires Officiels"
-            description="Des partenaires engages qui contribuent activement a la vie du club."
-          />
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-80px" }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {officialPartners.map((partner) => (
-              <motion.div key={partner.name} variants={staggerItem}>
-                <PartnerCard partner={partner} size="medium" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* REGULAR PARTNERS */}
-      <section className="py-24 md:py-36 bg-muted/50">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            label="Soutiens"
-            title="Partenaires"
-            description="Tous les partenaires qui participent au rayonnement du club."
-          />
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true, margin: "-80px" }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-          >
-            {regularPartners.map((partner) => (
-              <motion.div key={partner.name} variants={staggerItem}>
-                <PartnerCard partner={partner} size="regular" />
+                <PartnerCard partner={partner} />
               </motion.div>
             ))}
           </motion.div>
@@ -343,27 +185,27 @@ export default function PartenairesPage() {
                       <span className="text-usbiot-red">Partenaire</span>
                     </h2>
                     <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                      Associez votre image a un club familial et dynamique de la
-                      Cote d&apos;Azur. Plusieurs formules de partenariat sont
-                      disponibles selon vos objectifs de visibilite.
+                      Associez votre image à un club familial et dynamique de la
+                      Côte d&apos;Azur. Plusieurs formules de partenariat sont
+                      disponibles selon vos objectifs de visibilité.
                     </p>
                     <ul className="space-y-3 text-muted-foreground mb-8">
                       <li className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-usbiot-gold rounded-full shrink-0" />
-                        Visibilite sur les maillots, bannieres et supports de
+                        Visibilité sur les maillots, bannières et supports de
                         communication
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-usbiot-gold rounded-full shrink-0" />
-                        Presence sur le site internet et les reseaux sociaux du club
+                        Présence sur le site internet et les réseaux sociaux du club
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-usbiot-gold rounded-full shrink-0" />
-                        Invitations VIP aux evenements et matchs du club
+                        Invitations VIP aux événements et matchs du club
                       </li>
                       <li className="flex items-center gap-3">
                         <div className="w-2 h-2 bg-usbiot-gold rounded-full shrink-0" />
-                        Avantage fiscal : deduction d&apos;impot sur le
+                        Avantage fiscal : déduction d&apos;impôt sur le
                         sponsoring sportif
                       </li>
                     </ul>
@@ -374,9 +216,11 @@ export default function PartenairesPage() {
                       <div className="text-white font-heading text-xl font-bold mb-2">
                         Contactez-nous
                       </div>
-                      <p className="text-white/60 text-sm mb-6">
-                        Echangeons sur un partenariat sur mesure pour votre
-                        entreprise.
+                      <p className="text-white/60 text-sm mb-2">
+                        Damien Escoffier
+                      </p>
+                      <p className="text-white/50 text-xs mb-6">
+                        Commission Partenaires
                       </p>
                       <Link href="/contact">
                         <Button

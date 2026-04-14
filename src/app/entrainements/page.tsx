@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Clock,
   MapPin,
   UsersThree,
   ArrowRight,
@@ -29,142 +28,164 @@ interface Training {
   category: string;
   age: string;
   color: string;
-  sessions: { jour: string; horaire: string; terrain: string }[];
+  coaches: string[];
+  sessions: { jour: string; horaire: string }[];
 }
 
 const trainings: Training[] = [
   {
-    category: "U7",
-    age: "5-6 ans",
-    color: "bg-usbiot-red",
+    category: "U5/U6",
+    age: "Nés en 2021/2020",
+    color: "bg-usbiot-gold",
+    coaches: ["Bacha Nolan", "Deharbe Adriano"],
     sessions: [
-      {
-        jour: "Mercredi",
-        horaire: "14h00 - 15h30",
-        terrain: "Terrain synthetique A",
-      },
+      { jour: "Mercredi", horaire: "13h45 - 15h15" },
+    ],
+  },
+  {
+    category: "U7",
+    age: "Nés en 2019",
+    color: "bg-usbiot-red",
+    coaches: ["Drai Rémi", "Roch Mattéo"],
+    sessions: [
+      { jour: "Mercredi", horaire: "13h45 - 15h15" },
+    ],
+  },
+  {
+    category: "U8",
+    age: "Nés en 2018",
+    color: "bg-usbiot-gold/80",
+    coaches: ["Zid Rayane", "Claude Itibarian"],
+    sessions: [
+      { jour: "Mercredi", horaire: "13h45 - 15h15" },
     ],
   },
   {
     category: "U9",
-    age: "7-8 ans",
-    color: "bg-usbiot-gold",
-    sessions: [
-      {
-        jour: "Mercredi",
-        horaire: "14h00 - 15h30",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Samedi",
-        horaire: "10h00 - 11h30",
-        terrain: "Terrain synthetique B",
-      },
-    ],
-  },
-  {
-    category: "U10-U11",
-    age: "9-10 ans",
+    age: "Nés en 2017",
     color: "bg-usbiot-red-dark",
+    coaches: ["Escoffier Damien", "Righi Gilles"],
     sessions: [
-      {
-        jour: "Mercredi",
-        horaire: "14h00 - 15h30",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Vendredi",
-        horaire: "17h30 - 19h00",
-        terrain: "Terrain synthetique B",
-      },
+      { jour: "Mercredi", horaire: "13h45 - 15h15" },
+      { jour: "Vendredi", horaire: "18h15 - 19h45" },
     ],
   },
   {
-    category: "U12-U13",
-    age: "11-12 ans",
-    color: "bg-usbiot-gold/80",
-    sessions: [
-      {
-        jour: "Mardi",
-        horaire: "17h30 - 19h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Jeudi",
-        horaire: "17h30 - 19h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Samedi",
-        horaire: "10h00 - 11h30",
-        terrain: "Terrain synthetique A",
-      },
-    ],
-  },
-  {
-    category: "U14-U15",
-    age: "13-14 ans",
-    color: "bg-usbiot-red/80",
-    sessions: [
-      {
-        jour: "Mardi",
-        horaire: "18h00 - 19h30",
-        terrain: "Terrain synthetique B",
-      },
-      {
-        jour: "Jeudi",
-        horaire: "18h00 - 19h30",
-        terrain: "Terrain synthetique B",
-      },
-      {
-        jour: "Samedi",
-        horaire: "14h00 - 15h30",
-        terrain: "Terrain synthetique A",
-      },
-    ],
-  },
-  {
-    category: "U16-U18",
-    age: "15-17 ans",
+    category: "U10",
+    age: "Nés en 2016",
     color: "bg-usbiot-red",
+    coaches: ["Bacha Yann", "Van de Voorde Christophe"],
     sessions: [
-      {
-        jour: "Lundi",
-        horaire: "18h30 - 20h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Mercredi",
-        horaire: "18h30 - 20h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Vendredi",
-        horaire: "18h30 - 20h00",
-        terrain: "Terrain synthetique B",
-      },
+      { jour: "Lundi", horaire: "17h30 - 19h00" },
+      { jour: "Mercredi", horaire: "15h30 - 17h00" },
     ],
   },
   {
-    category: "Seniors",
-    age: "18+ ans",
-    color: "bg-usbiot-gold-dark",
+    category: "U11G",
+    age: "Nés en 2015",
+    color: "bg-usbiot-gold",
+    coaches: ["Roch Mattéo"],
     sessions: [
-      {
-        jour: "Mardi",
-        horaire: "19h30 - 21h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Jeudi",
-        horaire: "19h30 - 21h00",
-        terrain: "Terrain synthetique A",
-      },
-      {
-        jour: "Vendredi",
-        horaire: "19h30 - 21h00",
-        terrain: "Terrain synthetique B",
-      },
+      { jour: "Mercredi", horaire: "15h30 - 17h00" },
+      { jour: "Vendredi", horaire: "17h30 - 19h00" },
+    ],
+  },
+  {
+    category: "U12G",
+    age: "Nés en 2014",
+    color: "bg-usbiot-red/80",
+    coaches: ["Verucchi Jérôme", "Millien Julien"],
+    sessions: [
+      { jour: "Mercredi", horaire: "18h30 - 20h00" },
+      { jour: "Vendredi", horaire: "18h45 - 19h45" },
+    ],
+  },
+  {
+    category: "U13G",
+    age: "Nés en 2013",
+    color: "bg-usbiot-gold-dark",
+    coaches: ["Franzetti Thomas", "Beaudequin Quentin"],
+    sessions: [
+      { jour: "Lundi", horaire: "18h30 - 20h00" },
+      { jour: "Mercredi", horaire: "17h00 - 18h30" },
+    ],
+  },
+  {
+    category: "U13F",
+    age: "Nées en 2013/2014",
+    color: "bg-usbiot-red",
+    coaches: ["Macario Amélie"],
+    sessions: [
+      { jour: "Lundi", horaire: "18h30 - 20h00" },
+      { jour: "Mercredi", horaire: "15h30 - 17h00" },
+    ],
+  },
+  {
+    category: "U15G",
+    age: "Nés en 2012/2011",
+    color: "bg-usbiot-gold/80",
+    coaches: ["Lakrout Djemelle", "Deville Éric"],
+    sessions: [
+      { jour: "Mardi", horaire: "18h00 - 19h30" },
+      { jour: "Jeudi", horaire: "18h00 - 19h30" },
+    ],
+  },
+  {
+    category: "U17G",
+    age: "Nés en 2010/2009",
+    color: "bg-usbiot-red-dark",
+    coaches: ["Loiacono Patrice"],
+    sessions: [
+      { jour: "Lundi", horaire: "19h15 - 21h30" },
+      { jour: "Jeudi", horaire: "19h15 - 21h30" },
+    ],
+  },
+  {
+    category: "U19G",
+    age: "Nés en 2008/2007",
+    color: "bg-usbiot-red",
+    coaches: ["Valentin Willy"],
+    sessions: [
+      { jour: "Mardi", horaire: "19h45 - 22h00" },
+      { jour: "Jeudi", horaire: "19h45 - 22h00" },
+    ],
+  },
+  {
+    category: "Seniors D3",
+    age: "Nés en 2006 et avant",
+    color: "bg-usbiot-gold-dark",
+    coaches: ["Durand Malik"],
+    sessions: [
+      { jour: "Mercredi", horaire: "20h00 - 22h00" },
+      { jour: "Vendredi", horaire: "20h00 - 22h00" },
+    ],
+  },
+  {
+    category: "Gardiens",
+    age: "Toutes catégories",
+    color: "bg-usbiot-red/80",
+    coaches: ["Di Fante Jacques"],
+    sessions: [
+      { jour: "Mardi", horaire: "18h00 - 19h30" },
+      { jour: "Mercredi", horaire: "18h30 - 22h00" },
+    ],
+  },
+  {
+    category: "Foot à 7 (dimanche)",
+    age: "Nés avant 2006",
+    color: "bg-usbiot-gold",
+    coaches: [],
+    sessions: [
+      { jour: "Dimanche", horaire: "09h00 - 11h00" },
+    ],
+  },
+  {
+    category: "Foot à 7 (lundi)",
+    age: "Nés avant 2006",
+    color: "bg-usbiot-gold",
+    coaches: ["Morali Ariel"],
+    sessions: [
+      { jour: "Lundi", horaire: "20h00 - 22h00" },
     ],
   },
 ];
@@ -172,42 +193,28 @@ const trainings: Training[] = [
 /* ─── Coaching Staff ─── */
 
 const coaches = [
-  {
-    name: "Laurent Dupont",
-    role: "Directeur Technique",
-    categories: "Toutes categories",
-    diplome: "BEF — Brevet d'Entraineur de Football",
-  },
-  {
-    name: "Sebastien Martin",
-    role: "Entraineur Seniors",
-    categories: "Seniors",
-    diplome: "BMF — Brevet de Moniteur de Football",
-  },
-  {
-    name: "Nicolas Rossi",
-    role: "Responsable U16-U18",
-    categories: "U16-U18",
-    diplome: "BMF — Brevet de Moniteur de Football",
-  },
-  {
-    name: "Karim Bensaid",
-    role: "Responsable U12-U15",
-    categories: "U12-U13, U14-U15",
-    diplome: "CFF3 — Certificat Federal Football",
-  },
-  {
-    name: "Amelie Girard",
-    role: "Responsable Ecole de Foot",
-    categories: "U7, U9, U10-U11",
-    diplome: "CFF2 — Certificat Federal Football",
-  },
-  {
-    name: "Thomas Leroy",
-    role: "Entraineur Gardiens",
-    categories: "Toutes categories",
-    diplome: "CFF Gardien de But",
-  },
+  { name: "Bacha Nolan", categories: "U5/U6" },
+  { name: "Deharbe Adriano", categories: "U5/U6" },
+  { name: "Drai Rémi", categories: "U7" },
+  { name: "Roch Mattéo", categories: "U7, U11G" },
+  { name: "Zid Rayane", categories: "U8" },
+  { name: "Claude Itibarian", categories: "U8" },
+  { name: "Escoffier Damien", categories: "U9" },
+  { name: "Righi Gilles", categories: "U9" },
+  { name: "Bacha Yann", categories: "U10" },
+  { name: "Van de Voorde Christophe", categories: "U10" },
+  { name: "Verucchi Jérôme", categories: "U12G" },
+  { name: "Millien Julien", categories: "U12G" },
+  { name: "Franzetti Thomas", categories: "U13G" },
+  { name: "Beaudequin Quentin", categories: "U13G" },
+  { name: "Macario Amélie", categories: "U13F" },
+  { name: "Lakrout Djemelle", categories: "U15G" },
+  { name: "Deville Éric", categories: "U15G" },
+  { name: "Loiacono Patrice", categories: "U17G" },
+  { name: "Valentin Willy", categories: "U19G" },
+  { name: "Durand Malik", categories: "Seniors D3" },
+  { name: "Di Fante Jacques", categories: "Gardiens" },
+  { name: "Morali Ariel", categories: "Foot à 7" },
 ];
 
 /* ─── Facilities ─── */
@@ -215,21 +222,21 @@ const coaches = [
 const facilities = [
   {
     icon: Barbell,
-    title: "Terrain Synthetique A",
+    title: "Complexe Pierre Operto",
     description:
-      "Terrain principal derniere generation, eclairage LED, aux normes FFF. Surface 105x68m homologuee pour les matchs officiels.",
+      "Le complexe sportif Pierre Operto accueille tous les entraînements et matchs à domicile de l'US Biot Football.",
   },
   {
     icon: TShirt,
-    title: "Terrain Synthetique B",
+    title: "Terrains d'entraînement",
     description:
-      "Terrain d'entrainement synthetique avec eclairage. Surface 90x45m ideale pour les seances techniques et les categories jeunes.",
+      "Terrains synthétiques et en herbe pour toutes les catégories, de l'école de foot aux Seniors, avec éclairage pour les séances en soirée.",
   },
   {
     icon: UsersThree,
     title: "Vestiaires & Club-house",
     description:
-      "6 vestiaires modernes, club-house avec buvette, salle de reunion, infirmerie. Espace convivial pour les familles apres les matchs.",
+      "Vestiaires modernes, club-house avec buvette. Un espace convivial pour les familles et les joueurs après les matchs.",
   },
 ];
 
@@ -258,9 +265,9 @@ export default function EntrainementsPage() {
               Entra&icirc;ne<span className="text-usbiot-gold">ments</span>
             </h1>
             <p className="mt-6 text-white/70 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-              Retrouvez les horaires d&apos;entrainement de toutes les categories,
-              de l&apos;ecole de foot aux Seniors. Tout se passe au Stade de la
-              Cheze a Biot.
+              Retrouvez les horaires d&apos;entraînement de toutes les catégories,
+              de l&apos;école de foot aux Seniors. Tous les entraînements ont lieu
+              au Complexe Pierre Operto à Biot.
             </p>
           </motion.div>
         </div>
@@ -272,7 +279,7 @@ export default function EntrainementsPage() {
           <SectionHeading
             label="Planning"
             title="Horaires par categorie"
-            description="Les entrainements ont lieu au Stade Municipal de la Cheze, Chemin de la Cheze, 06410 Biot."
+            description="Tous les entraînements ont lieu au Complexe Pierre Operto, Biot."
           />
 
           {/* Desktop table */}
@@ -282,16 +289,16 @@ export default function EntrainementsPage() {
                 <thead>
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-4 px-4 font-heading text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-                      Categorie
+                      Catégorie
+                    </th>
+                    <th className="text-left py-4 px-4 font-heading text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                      Éducateur(s)
                     </th>
                     <th className="text-left py-4 px-4 font-heading text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                       Jour
                     </th>
                     <th className="text-left py-4 px-4 font-heading text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                       Horaire
-                    </th>
-                    <th className="text-left py-4 px-4 font-heading text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-                      Terrain
                     </th>
                   </tr>
                 </thead>
@@ -314,10 +321,20 @@ export default function EntrainementsPage() {
                               <span className="font-semibold">
                                 {t.category}
                               </span>
-                              <span className="text-xs text-muted-foreground">
-                                ({t.age})
-                              </span>
                             </div>
+                            <span className="text-xs text-muted-foreground ml-5">
+                              {t.age}
+                            </span>
+                          </td>
+                        )}
+                        {si === 0 && (
+                          <td
+                            rowSpan={t.sessions.length}
+                            className="py-3 px-4 align-top text-sm text-muted-foreground"
+                          >
+                            {t.coaches.length > 0
+                              ? t.coaches.join(", ")
+                              : "—"}
                           </td>
                         )}
                         <td className="py-3 px-4 text-sm">{s.jour}</td>
@@ -325,12 +342,6 @@ export default function EntrainementsPage() {
                           <Badge variant="secondary" className="font-mono text-xs">
                             {s.horaire}
                           </Badge>
-                        </td>
-                        <td className="py-3 px-4 text-sm text-muted-foreground">
-                          <div className="flex items-center gap-1.5">
-                            <MapPin className="size-3.5" weight="regular" />
-                            {s.terrain}
-                          </div>
                         </td>
                       </tr>
                     ))
@@ -363,6 +374,12 @@ export default function EntrainementsPage() {
                         {t.age}
                       </Badge>
                     </div>
+                    {t.coaches.length > 0 && (
+                      <p className="text-xs text-muted-foreground mt-1">
+                        <GraduationCap className="inline size-3 mr-1" weight="regular" />
+                        {t.coaches.join(", ")}
+                      </p>
+                    )}
                   </CardHeader>
                   <CardContent className="px-4 pb-4">
                     <div className="space-y-3">
@@ -377,10 +394,6 @@ export default function EntrainementsPage() {
                           <div className="flex-1">
                             <div className="font-mono text-xs text-usbiot-red font-semibold">
                               {s.horaire}
-                            </div>
-                            <div className="flex items-center gap-1 mt-0.5 text-xs text-muted-foreground">
-                              <MapPin className="size-3" weight="regular" />
-                              {s.terrain}
                             </div>
                           </div>
                         </div>
@@ -400,7 +413,7 @@ export default function EntrainementsPage() {
           <SectionHeading
             label="Infrastructures"
             title="Nos installations"
-            description="Le club dispose d'installations modernes au coeur de Biot, sur la Cote d'Azur."
+            description="Le club dispose d'installations au Complexe Pierre Operto, au cœur de Biot."
           />
 
           <motion.div
@@ -433,7 +446,7 @@ export default function EntrainementsPage() {
             <div className="mt-8 flex items-center gap-2 justify-center text-sm text-muted-foreground">
               <MapPin className="size-4" weight="regular" />
               <span>
-                Stade Municipal de la Cheze — Chemin de la Cheze, 06410 Biot
+                Complexe Pierre Operto — Biot, 06410
               </span>
             </div>
           </ScrollReveal>
@@ -445,8 +458,8 @@ export default function EntrainementsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             label="Encadrement"
-            title="Notre staff technique"
-            description="Une equipe d'educateurs diplomes et passionnes, au service de la formation de nos joueurs."
+            title="Nos éducateurs"
+            description="Une équipe d'éducateurs passionnés, au service de la formation de nos joueurs et joueuses."
           />
 
           <motion.div
@@ -454,33 +467,24 @@ export default function EntrainementsPage() {
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4"
           >
             {coaches.map((c) => (
               <motion.div key={c.name} variants={staggerItem}>
                 <Card className="h-full">
-                  <CardContent className="p-6">
-                    <div className="size-12 rounded-full bg-gradient-to-br from-usbiot-red to-usbiot-red-dark flex items-center justify-center mb-4 text-white font-heading font-bold text-lg">
+                  <CardContent className="p-4">
+                    <div className="size-10 rounded-full bg-gradient-to-br from-usbiot-red to-usbiot-red-dark flex items-center justify-center mb-3 text-white font-heading font-bold text-sm">
                       {c.name
                         .split(" ")
                         .map((n) => n[0])
                         .join("")}
                     </div>
-                    <h3 className="font-heading font-bold text-base">
+                    <h3 className="font-heading font-bold text-sm">
                       {c.name}
                     </h3>
-                    <p className="text-sm text-usbiot-red font-medium mt-0.5">
-                      {c.role}
-                    </p>
-                    <div className="mt-3 space-y-1.5">
-                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <UsersThree className="size-3" weight="regular" />
-                        {c.categories}
-                      </div>
-                      <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                        <GraduationCap className="size-3" weight="regular" />
-                        {c.diplome}
-                      </div>
+                    <div className="mt-1.5 flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <UsersThree className="size-3" weight="regular" />
+                      {c.categories}
                     </div>
                   </CardContent>
                 </Card>
