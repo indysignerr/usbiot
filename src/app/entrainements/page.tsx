@@ -520,8 +520,8 @@ export default function EntrainementsPage() {
                 <Link href="/contact">
                   <Button
                     size="lg"
-                    variant="outline"
-                    className="border-white/30 text-white hover:bg-white/10 gap-2"
+                    variant="ghost"
+                    className="border border-white/30 text-white bg-transparent hover:bg-white/10 gap-2"
                   >
                     Nous contacter
                   </Button>

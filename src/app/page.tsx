@@ -96,7 +96,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,_rgba(216,38,28,0.4),_transparent)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_20%,_rgba(205,183,40,0.12),_transparent)]" />
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-usbiot-gold/[0.06] via-transparent to-transparent skew-x-[-6deg] origin-top-right" />
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
         {/* Ghost watermark logo */}
         <motion.div
@@ -188,38 +188,35 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Stats bar -- overlapping into next section */}
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2"
-        >
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-usbiot-red to-usbiot-red-dark border border-white/[0.06]">
-              {stats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className={`p-6 md:p-8 text-center relative ${
-                    i < stats.length - 1 ? "md:border-r border-white/[0.06]" : ""
-                  } ${i < 2 ? "border-b md:border-b-0 border-white/[0.06]" : ""} group hover:bg-white/[0.03] transition-colors duration-500`}
-                >
-                  <stat.icon className="w-5 h-5 text-usbiot-gold mx-auto mb-3 opacity-50 group-hover:opacity-100 transition-opacity" weight="duotone" />
-                  <div className="text-3xl md:text-4xl font-heading font-extrabold text-white tracking-tight">
-                    {stat.value}
-                  </div>
-                  <div className="text-[10px] text-white/35 uppercase tracking-[0.2em] font-semibold mt-1">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </section>
 
-      {/* Spacer for overlapping stats */}
-      <div className="h-28 md:h-32" />
+      {/* STATS BAR -- inline below hero */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="max-w-5xl mx-auto px-6 -mt-16 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-usbiot-red to-usbiot-red-dark border border-white/[0.06]">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className={`p-6 md:p-8 text-center relative ${
+                  i < stats.length - 1 ? "md:border-r border-white/[0.06]" : ""
+                } ${i < 2 ? "border-b md:border-b-0 border-white/[0.06]" : ""} group hover:bg-white/[0.03] transition-colors duration-500`}
+              >
+                <stat.icon className="w-5 h-5 text-usbiot-gold mx-auto mb-3 opacity-50 group-hover:opacity-100 transition-opacity" weight="duotone" />
+                <div className="text-3xl md:text-4xl font-heading font-extrabold text-white tracking-tight">
+                  {stat.value}
+                </div>
+                <div className="text-[10px] text-white/35 uppercase tracking-[0.2em] font-semibold mt-1">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
 
       {/* VALUES -- grid with gap-px for editorial divider look */}
       <section className="py-24 md:py-36">
@@ -305,7 +302,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-12">
             <Link href="/equipes">
-              <Button variant="outline" className="font-semibold border-white/20 text-white hover:bg-white/10 rounded-none px-8 h-12">
+              <Button variant="ghost" className="font-semibold border border-white/20 text-white bg-transparent hover:bg-white/10 rounded-none px-8 h-12">
                 Voir toutes les équipes
                 <ArrowRight className="w-4 h-4 ml-2" weight="bold" />
               </Button>
@@ -362,7 +359,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <Link href="/calendrier">
-                    <Button variant="outline" className="w-full font-semibold border-white/15 text-white hover:bg-white/10 rounded-none h-12">
+                    <Button variant="ghost" className="w-full font-semibold border border-white/20 text-white bg-transparent hover:bg-white/10 rounded-none h-12">
                       Voir le calendrier complet
                     </Button>
                   </Link>
