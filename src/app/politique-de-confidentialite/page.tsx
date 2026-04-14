@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ShieldCheck,
+  LockKey,
   Eye,
   Database,
   UserCircle,
@@ -243,7 +243,7 @@ const sections = [
   },
   {
     id: "droits",
-    icon: ShieldCheck,
+    icon: LockKey,
     title: "Droits des utilisateurs",
     content: (
       <>

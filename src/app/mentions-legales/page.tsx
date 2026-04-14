@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import {
   Scales,
-  Shield,
+  Copyright,
   Globe,
   Link as LinkIcon,
   Gavel,
@@ -40,7 +40,7 @@ const sections = [
   {
     id: "propriete-intellectuelle",
     title: "Propriete intellectuelle",
-    icon: Shield,
+    icon: Copyright,
     content: [
       "L'ensemble du contenu de ce site (textes, images, photographies, logos, icones, videos, sons, logiciels, base de donnees, mise en page) est la propriete exclusive de l'Union Sportive de Biot ou de ses partenaires et est protege par les lois francaises et internationales relatives a la propriete intellectuelle.",
       "Toute reproduction, representation, modification, publication, transmission, denaturation, totale ou partielle du site ou de son contenu, par quelque procede que ce soit, et sur quelque support que ce soit est interdite sans l'autorisation ecrite prealable de l'US Biot.",

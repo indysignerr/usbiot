@@ -8,7 +8,7 @@ import {
   Trophy,
   Heart,
   Target,
-  Shield,
+  ClipboardText,
   Star,
   MapPin,
   Clock,
@@ -119,7 +119,7 @@ const bureau = [
     role: "Secr\u00e9taire",
     description:
       "Garant de l'organisation administrative et de la coordination entre les diff\u00e9rentes instances du club.",
-    icon: Shield,
+    icon: ClipboardText,
   },
   {
     name: "Henrick Kellou",

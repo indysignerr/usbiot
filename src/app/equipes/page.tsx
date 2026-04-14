@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Shield,
+  SoccerBall,
   UsersThree,
   CalendarBlank,
   Trophy,
@@ -292,7 +292,7 @@ export default function EquipesPage() {
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-3 gap-4">
               {[
-                { value: "15", label: "Catégories", icon: Shield },
+                { value: "15", label: "Catégories", icon: SoccerBall },
                 { value: "300+", label: "Licenciés", icon: UsersThree },
                 { value: "22", label: "Éducateurs", icon: GraduationCap },
               ].map((stat) => (

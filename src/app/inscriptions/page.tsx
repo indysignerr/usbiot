@@ -8,7 +8,7 @@ import {
   FileText,
   Camera,
   CreditCard,
-  Shield,
+  Medal,
   Star,
   UsersThree,
   CalendarBlank,
@@ -94,7 +94,7 @@ const stages = [
 ];
 
 const inclus = [
-  { icon: Shield, label: "Licence FFF incluse" },
+  { icon: Medal, label: "Licence FFF incluse" },
   { icon: Star, label: "Equipement du club (maillot, short, chaussettes)" },
   { icon: CreditCard, label: "Assurance sportive" },
   { icon: UsersThree, label: "Acces aux entrainements et matchs" },

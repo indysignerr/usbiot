@@ -9,9 +9,10 @@ import {
   CalendarBlank,
   Star,
   ArrowRight,
-  Shield,
+  Buildings,
   Heart,
   Target,
+  SoccerBall,
 } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -22,7 +23,7 @@ import { staggerContainer, staggerItem } from "@/lib/motion";
 
 const stats = [
   { value: "300+", label: "Licenciés", icon: UsersThree },
-  { value: "15+", label: "Équipes", icon: Shield },
+  { value: "15+", label: "Équipes", icon: SoccerBall },
   { value: "75+", label: "Années", icon: Trophy },
   { value: "5/5", label: "Avis Google", icon: Star },
 ];
@@ -56,7 +57,7 @@ const values = [
       "Des équipes engagées en championnat de district et départemental pour vivre la passion du football.",
   },
   {
-    icon: Shield,
+    icon: Buildings,
     title: "Infrastructures",
     description:
       "Terrain synthétique dernière génération, vestiaires modernes, installations haut niveau.",
