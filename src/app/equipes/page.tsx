@@ -282,40 +282,7 @@ export default function EquipesPage() {
           </motion.div>
         </div>
 
-        {/* Quick stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="absolute bottom-0 left-0 right-0 z-10 translate-y-1/2"
-        >
-          <div className="max-w-4xl mx-auto px-6">
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { value: "15", label: "Catégories", icon: SoccerBall },
-                { value: "300+", label: "Licenciés", icon: UsersThree },
-                { value: "22", label: "Éducateurs", icon: GraduationCap },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="bg-gradient-to-r from-usbiot-red to-usbiot-red-dark p-4 text-center border border-white/[0.06]"
-                >
-                  <stat.icon className="w-5 h-5 text-usbiot-gold mx-auto mb-2" weight="duotone" />
-                  <div className="text-2xl font-heading font-bold text-white">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-white/60 uppercase tracking-wider font-medium">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </section>
-
-      {/* Spacer for overlapping stats */}
-      <div className="h-20 md:h-24" />
 
       {/* TABS SECTION */}
       <section className="py-24 md:py-36">
