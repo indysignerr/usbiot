@@ -7,6 +7,7 @@ interface SectionHeadingProps {
   title: string;
   description?: string;
   align?: "left" | "center";
+  className?: string;
 }
 
 export function SectionHeading({
@@ -14,10 +15,11 @@ export function SectionHeading({
   title,
   description,
   align = "center",
+  className,
 }: SectionHeadingProps) {
   return (
     <ScrollReveal
-      className={`mb-16 md:mb-24 ${align === "center" ? "text-center" : "text-left"}`}
+      className={`${className ?? "mb-16 md:mb-24"} ${align === "center" ? "text-center" : "text-left"}`}
     >
       {label && (
         <div className={`flex items-center gap-3 mb-5 ${align === "center" ? "justify-center" : ""}`}>
