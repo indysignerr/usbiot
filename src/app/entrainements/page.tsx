@@ -41,15 +41,15 @@ const trainings: Training[] = [
   {
     category: "U5/U6",
     age: "Nés en 2021/2020",
-    color: "bg-usbiot-gold",
-    textColor: "text-usbiot-ink",
+    color: "bg-sky-400",
+    textColor: "text-white",
     coaches: ["Bacha Nolan", "Deharbe Adriano"],
     sessions: [{ jour: "Mercredi", horaire: "13h45 - 15h15" }],
   },
   {
     category: "U7",
     age: "Nés en 2019",
-    color: "bg-usbiot-red",
+    color: "bg-cyan-500",
     textColor: "text-white",
     coaches: ["Drai Rémi", "Roch Mattéo"],
     sessions: [{ jour: "Mercredi", horaire: "13h45 - 15h15" }],
@@ -57,15 +57,15 @@ const trainings: Training[] = [
   {
     category: "U8",
     age: "Nés en 2018",
-    color: "bg-usbiot-gold/80",
-    textColor: "text-usbiot-ink",
+    color: "bg-teal-500",
+    textColor: "text-white",
     coaches: ["Zid Rayane", "Claude Itibarian"],
     sessions: [{ jour: "Mercredi", horaire: "13h45 - 15h15" }],
   },
   {
     category: "U9",
     age: "Nés en 2017",
-    color: "bg-usbiot-red-dark",
+    color: "bg-emerald-500",
     textColor: "text-white",
     coaches: ["Escoffier Damien", "Righi Gilles"],
     sessions: [
@@ -76,8 +76,8 @@ const trainings: Training[] = [
   {
     category: "U10",
     age: "Nés en 2016",
-    color: "bg-usbiot-red",
-    textColor: "text-white",
+    color: "bg-lime-500",
+    textColor: "text-usbiot-ink",
     coaches: ["Bacha Yann", "Van de Voorde Christophe"],
     sessions: [
       { jour: "Lundi", horaire: "17h30 - 19h00" },
@@ -87,7 +87,7 @@ const trainings: Training[] = [
   {
     category: "U11G",
     age: "Nés en 2015",
-    color: "bg-usbiot-gold",
+    color: "bg-yellow-500",
     textColor: "text-usbiot-ink",
     coaches: ["Roch Mattéo"],
     sessions: [
@@ -98,7 +98,7 @@ const trainings: Training[] = [
   {
     category: "U12G",
     age: "Nés en 2014",
-    color: "bg-usbiot-red/80",
+    color: "bg-amber-500",
     textColor: "text-white",
     coaches: ["Verucchi Jérôme", "Millien Julien"],
     sessions: [
@@ -109,7 +109,7 @@ const trainings: Training[] = [
   {
     category: "U13G",
     age: "Nés en 2013",
-    color: "bg-usbiot-gold-dark",
+    color: "bg-orange-500",
     textColor: "text-white",
     coaches: ["Franzetti Thomas", "Beaudequin Quentin"],
     sessions: [
@@ -120,7 +120,7 @@ const trainings: Training[] = [
   {
     category: "U13F",
     age: "Nées en 2013/2014",
-    color: "bg-usbiot-red",
+    color: "bg-pink-500",
     textColor: "text-white",
     coaches: ["Macario Amélie"],
     sessions: [
@@ -131,8 +131,8 @@ const trainings: Training[] = [
   {
     category: "U15G",
     age: "Nés en 2012/2011",
-    color: "bg-usbiot-gold/80",
-    textColor: "text-usbiot-ink",
+    color: "bg-rose-500",
+    textColor: "text-white",
     coaches: ["Lakrout Djemelle", "Deville Éric"],
     sessions: [
       { jour: "Mardi", horaire: "18h00 - 19h30" },
@@ -142,7 +142,7 @@ const trainings: Training[] = [
   {
     category: "U17G",
     age: "Nés en 2010/2009",
-    color: "bg-usbiot-red-dark",
+    color: "bg-red-600",
     textColor: "text-white",
     coaches: ["Loiacono Patrice"],
     sessions: [
@@ -153,7 +153,7 @@ const trainings: Training[] = [
   {
     category: "U19G",
     age: "Nés en 2008/2007",
-    color: "bg-usbiot-red",
+    color: "bg-fuchsia-600",
     textColor: "text-white",
     coaches: ["Valentin Willy"],
     sessions: [
@@ -164,7 +164,7 @@ const trainings: Training[] = [
   {
     category: "Seniors D3",
     age: "Nés en 2006 et avant",
-    color: "bg-usbiot-gold-dark",
+    color: "bg-purple-600",
     textColor: "text-white",
     coaches: ["Durand Malik"],
     sessions: [
@@ -175,7 +175,7 @@ const trainings: Training[] = [
   {
     category: "Gardiens",
     age: "Toutes catégories",
-    color: "bg-usbiot-red/80",
+    color: "bg-violet-600",
     textColor: "text-white",
     coaches: ["Di Fante Jacques"],
     sessions: [
@@ -186,16 +186,16 @@ const trainings: Training[] = [
   {
     category: "Foot à 7 (dim)",
     age: "Nés avant 2006",
-    color: "bg-usbiot-gold",
-    textColor: "text-usbiot-ink",
+    color: "bg-indigo-500",
+    textColor: "text-white",
     coaches: [],
     sessions: [{ jour: "Dimanche", horaire: "09h00 - 11h00" }],
   },
   {
     category: "Foot à 7 (lun)",
     age: "Nés avant 2006",
-    color: "bg-usbiot-gold",
-    textColor: "text-usbiot-ink",
+    color: "bg-blue-600",
+    textColor: "text-white",
     coaches: ["Morali Ariel"],
     sessions: [{ jour: "Lundi", horaire: "20h00 - 22h00" }],
   },

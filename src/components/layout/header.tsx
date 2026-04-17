@@ -10,22 +10,13 @@ import {
   Sun,
   Moon,
   Phone,
-  CaretDown,
 } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 
 const navigation = [
   { name: "Accueil", href: "/" },
-  {
-    name: "Le Club",
-    href: "/le-club",
-    children: [
-      { name: "Presentation", href: "/le-club" },
-      { name: "Staff & Dirigeants", href: "/le-club#staff" },
-      { name: "Histoire", href: "/le-club#histoire" },
-    ],
-  },
+  { name: "Le Club", href: "/le-club" },
   { name: "Equipes", href: "/equipes" },
   { name: "Calendrier", href: "/calendrier" },
   { name: "Entrainements", href: "/entrainements" },
@@ -116,33 +107,14 @@ export function Header() {
             {navigation.map((item) => {
               const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
               return (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg flex items-center gap-1 ${isTransparentOnDark ? "hover:bg-white/10" : "hover:bg-usbiot-gold/10"} ${isActive ? "text-usbiot-gold font-semibold" : (isTransparentOnDark ? "text-white/80 hover:text-usbiot-gold" : "text-foreground/80 hover:text-usbiot-gold")}`}
-                >
-                  {item.name}
-                  {item.children && (
-                    <CaretDown className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" weight="bold" />
-                  )}
-                </Link>
-                {item.children && (
-                  <div className="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-card border border-border rounded-lg shadow-lg py-1 min-w-[200px]">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.name}
-                          href={child.href}
-                          className="block px-4 py-2 text-sm text-foreground/80 hover:text-usbiot-gold hover:bg-usbiot-gold/10 transition-colors"
-                        >
-                          {child.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={`px-3 py-2 text-sm font-medium transition-colors rounded-lg flex items-center gap-1 ${isTransparentOnDark ? "hover:bg-white/10" : "hover:bg-usbiot-gold/10"} ${isActive ? "text-usbiot-gold font-semibold" : (isTransparentOnDark ? "text-white/80 hover:text-usbiot-gold" : "text-foreground/80 hover:text-usbiot-gold")}`}
+              >
+                {item.name}
+              </Link>
               );
             })}
           </div>

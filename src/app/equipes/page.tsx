@@ -438,7 +438,7 @@ export default function EquipesPage() {
                 <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border-border/50">
                   <div className="flex items-center gap-3 mb-4">
                     <div
-                      className={`w-10 h-10 ${cat.color} flex items-center justify-center group-hover:scale-110 transition-transform`}
+                      className="w-10 h-10 bg-white rounded-lg border border-border/40 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm"
                     >
                       <Image
                         src="/images/logo-usbiot.png"
