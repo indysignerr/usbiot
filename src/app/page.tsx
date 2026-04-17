@@ -110,7 +110,7 @@ export default function HomePage() {
             alt=""
             width={440}
             height={520}
-            className="opacity-100"
+            className="opacity-90"
             priority
             aria-hidden
           />
